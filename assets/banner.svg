@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#080d1a" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.85" />
+    </linearGradient>
+
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 42px;
+        fill: #ffffff;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        fill: #94a3b8;
+        letter-spacing: 0.2px;
+      }
+      .tag-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #e2e8f0;
+      }
+      .status-text {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-weight: 600;
+        font-size: 12px;
+        fill: #34d399;
+      }
+
+      /* Animated Dynamic Pulse Rings and Beams (Background Layers) */
+      @keyframes pulseRing {
+        0% { r: 40px; opacity: 0.7; }
+        50% { r: 95px; opacity: 0.2; }
+        100% { r: 150px; opacity: 0; }
+      }
+      @keyframes floatSlow1 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(1.5deg); }
+      }
+      @keyframes floatSlow2 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(-1deg); }
+      }
+      @keyframes scanline {
+        0% { transform: translateY(-180px); opacity: 0; }
+        50% { opacity: 0.6; }
+        100% { transform: translateY(180px); opacity: 0; }
+      }
+      @keyframes dashflow {
+        to { stroke-dashoffset: -40; }
+      }
+
+      .pulse-1 { animation: pulseRing 4s infinite ease-out; }
+      .pulse-2 { animation: pulseRing 4s infinite ease-out 2s; }
+      .floating-card-1 { animation: floatSlow1 7s infinite ease-in-out; transform-origin: center; }
+      .floating-card-2 { animation: floatSlow2 6s infinite ease-in-out 1s; transform-origin: center; }
+      .flow-path { stroke-dasharray: 6 6; animation: dashflow 2.5s linear infinite; }
+      .scan-beam { animation: scanline 5s infinite ease-in-out; }
+    </style>
+  </defs>
+
+  <!-- Deep Cyber Dark Base Canvas -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+
+  <!-- Subtle Ambient Grid in Background -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Dynamic Animated Background Radar Glows -->
+  <g transform="translate(1050, 180)">
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#3b82f6" stroke-width="2" class="pulse-1" />
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#8b5cf6" stroke-width="2" class="pulse-2" />
+    <circle cx="0" cy="0" r="30" fill="#3b82f6" fill-opacity="0.15" filter="url(#glow)" />
+  </g>
+
+  <g transform="translate(120, 80)">
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#10b981" stroke-width="1.5" class="pulse-2" />
+  </g>
+
+  <!-- Background Decorative Glowing Data Streams -->
+  <path d="M 60 300 Q 250 330, 480 290 T 950 310 T 1150 250" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.3" class="flow-path" />
+  <path d="M 100 70 Q 400 40, 700 80 T 1120 60" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.25" class="flow-path" />
+
+  <!-- Right Floating Metric Card 1 (Automated Verification Badge) -->
+  <g class="floating-card-1" transform="translate(860, 65)">
+    <rect width="280" height="95" rx="14" fill="url(#cardGrad)" stroke="#3b82f6" stroke-width="1.5" opacity="0.9" />
+    <circle cx="36" cy="48" r="16" fill="#10b981" fill-opacity="0.2" />
+    <path d="M 28 48 L 34 54 L 46 41" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="64" y="42" class="tag-text">Trust Center Live Status</text>
+    <text x="64" y="65" class="status-text">● SOC2 • ISO27001 • PASS</text>
+  </g>
+
+  <!-- Right Floating Metric Card 2 (Continuous Controls Assurance) -->
+  <g class="floating-card-2" transform="translate(890, 195)">
+    <rect width="250" height="95" rx="14" fill="url(#cardGrad)" stroke="#8b5cf6" stroke-width="1.5" opacity="0.9" />
+    <circle cx="36" cy="48" r="16" fill="#8b5cf6" fill-opacity="0.2" />
+    <!-- Shield Icon -->
+    <path d="M 36 36 L 46 40 V 50 C 46 56 36 60 36 60 C 36 60 26 56 26 50 V 40 Z" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round" />
+    <text x="64" y="42" class="tag-text">Continuous GRC Audit</text>
+    <text x="64" y="65" class="status-text" fill="#a78bfa">● 100% Controls Active</text>
+  </g>
+
+  <!-- FOREGROUND HERO CONTENT (Guaranteed High Contrast & Foreground Positioning) -->
+  <g transform="translate(80, 0)">
+
+    <!-- Top Pillar Pill -->
+    <g transform="translate(0, 65)">
+      <rect width="320" height="32" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+      <circle cx="16" cy="16" r="5" fill="#3b82f6" />
+      <text x="32" y="21" class="tag-text" font-size="12" fill="#93c5fd">SECURITY &amp; COMPLIANCE DIRECTORY</text>
+    </g>
+
+    <!-- Main Title with Glowing Gradient Accent Line -->
+    <text x="0" y="150" class="title-text">Awesome Security Compliance Portal</text>
+    <rect x="0" y="168" width="560" height="4" rx="2" fill="url(#primaryGlow)" filter="url(#subtleGlow)" />
+
+    <!-- Subtitle / Value Proposition Description -->
+    <text x="0" y="208" class="subtitle-text">Curated Trust Centers, Continuous Compliance Automation,</text>
+    <text x="0" y="234" class="subtitle-text">Evidence Collection &amp; Self-Hosted Open-Source GRC Portals</text>
+
+    <!-- Interactive Framework Pill Tags in Foreground -->
+    <g transform="translate(0, 268)">
+      <!-- SOC 2 Tag -->
+      <rect x="0" y="0" width="85" height="30" rx="8" fill="#1e293b" stroke="#334155" />
+      <text x="16" y="20" class="tag-text" fill="#38bdf8">🛡️ SOC 2</text>
+
+      <!-- ISO 27001 Tag -->
+      <rect x="97" y="0" width="112" height="30" rx="8" fill="#1e293b" stroke="#334155" />
+      <text x="111" y="20" class="tag-text" fill="#818cf8">📋 ISO 27001</text>
+
+      <!-- HIPAA & GDPR Tag -->
+      <rect x="221" y="0" width="138" height="30" rx="8" fill="#1e293b" stroke="#334155" />
+      <text x="233" y="20" class="tag-text" fill="#a78bfa">🔒 HIPAA / GDPR</text>
+
+      <!-- Trust Centers Tag -->
+      <rect x="371" y="0" width="138" height="30" rx="8" fill="#1e293b" stroke="#334155" />
+      <text x="383" y="20" class="tag-text" fill="#34d399">🌐 Trust Centers</text>
+
+      <!-- Open Source GRC Tag -->
+      <rect x="521" y="0" width="148" height="30" rx="8" fill="#1e293b" stroke="#334155" />
+      <text x="533" y="20" class="tag-text" fill="#fbbf24">⚙️ Open-Source</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Tech Line -->
+  <rect x="0" y="356" width="1200" height="4" fill="url(#primaryGlow)" />
+</svg>
