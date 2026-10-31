@@ -1,203 +1,144 @@
 # Awesome-Security-Compliance-Portal
 
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Security-Compliance-Portal"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Security-Compliance-Portal?style=social" alt="GitHub Stars" /></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?labelFollow" /></a>
+</p>
+
 ## Top Security & Compliance Portal Ecosystem
 
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Trust Center Publishing, Compliance Automation & Self-Hosted GRC Portals*  
+> **Curated List of SaaS Products & Open-Source GitHub Projects for Trust Center Publishing, Continuous Compliance Automation, and Self-Hosted GRC Portals.**
 
 **Last updated: October 2026**
 
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Security & Compliance Portals**. These tools enable organizations to publish a public-facing Trust Center that showcases security posture, compliance certifications, and subprocessors—while automating the internal GRC work (evidence collection, control tracking, audit readiness) that makes those public claims credible.
-
-
-
-**Examples** include Atlassian Trust Center, SafeBase, Conveyor, TrustCloud, Vanta Trust Center, Drata Trust Center, Whistic, OneTrust, Secureframe Trust Center, and RegScale (the category leaders).
-
-
-
-**Open-source emphasis**: Security & Compliance Portals is a domain where open-source tooling is **genuinely emerging but fragmented across two distinct layers**. The **public Trust Center layer** is served by **Kodus Trust Center** (a YAML-driven, self-hosted trust portal with compliance badges, document requests, subprocessors, and FAQs) and **Probo's compliance page** (a public portal with NDA management, certification publishing, and custom domain support) . The **internal GRC automation layer** is served by **Probo** (full GRC lifecycle with 270+ MCP tools for AI agents) , **Openlane** (SOC 2, ISO 27001, NIST 800-53 automation with SSO on every tier) , and **QuickTrust** (AI-agent-first SOC 2 automation) . The critical caveat: **no single open-source project matches the full SafeBase or Vanta experience**—you either assemble a trust portal (Kodus) with a separate GRC backend (Probo/Openlane), or accept that Probo's public compliance page is less customizable than dedicated trust center tools .
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Atlassian Trust Center](https://www.atlassian.com/)**  
-
-  Atlassian's public trust portal showcasing compliance certifications, security practices, and subprocessors for Jira, Confluence, and Bitbucket.
-
-
-
-- **[SafeBase](https://safebase.io/)**  
-
-  The leading Trust Center platform; automates security questionnaire responses, manages NDA-gated document access, and provides a customizable public trust portal.
-
-
-
-- **[Conveyor](https://conveyor.com/)**  
-
-  Trust Center and security questionnaire automation platform; focused on reducing sales friction by answering buyer security questions instantly.
-
-
-
-- **[TrustCloud](https://trustcloud.ai/)**  
-
-  GRC and Trust Center platform combining compliance automation with a public trust portal for demonstrating security posture.
-
-
-
-- **[Vanta Trust Center](https://www.vanta.com/)**  
-
-  Public trust portal integrated with Vanta's compliance automation platform; publishes certifications and security posture to buyers.
-
-
-
-- **[Drata Trust Center](https://drata.com/)**  
-
-  Trust Center within Drata's compliance automation platform; showcases compliance status and automates evidence collection.
-
-
-
-- **[Whistic](https://www.whistic.com/)**  
-
-  Vendor security assessment and Trust Center platform; enables organizations to publish a trust profile and respond to assessments.
-
-
-
-- **[OneTrust](https://www.onetrust.com/)**  
-
-  GRC platform with Trust Center capabilities for privacy, security, and third-party risk; broad enterprise coverage.
-
-
-
-- **[Secureframe Trust Center](https://secureframe.com/)**  
-
-  Trust Center within Secureframe's compliance platform; publishes certifications and automates questionnaire responses.
-
-
-
-- **[RegScale](https://regscale.com/)**  
-
-  Continuous controls monitoring platform with compliance-as-code foundation; provides trust portal capabilities alongside GRC automation.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Public Trust Centers (Standalone)
-
-
-
-- **[Kodus Trust Center](https://github.com/kodustech/trust-center)**  
-
-  The most focused open-source **standalone Trust Center** available—a self-hosted, YAML-driven builder that renders a polished public trust portal from a single YAML document . Features: **compliance badges**, **document requests** (email + admin review), **subprocessors** listing, FAQs accordion, policies, infrastructure/monitoring sections, theming (light/dark), company logo, and hero commitments . **Admin dashboard** with GitHub SSO (NextAuth) and a YAML editor with live preview . **Tech stack**: Next.js 16, Supabase for storage, Shadcn/ui + Tailwind CSS v4 . **Deploy anywhere** (Vercel, Fly, Render) with no vendor lock-in . **Best for organizations wanting a simple, self-hosted public trust portal** without the weight of a full GRC platform—but it is trust-center-only, not a GRC automation backend.
-
-
-
-- **[TrustSite (defentorretrustsite)](https://github.com/defentorretrustsite/TrustSite)**  
-
-  Self-hosted Trust Center on GitHub with **default-deny network policy** and no secrets in the repo . Features: **approved answer bank** with citations back to source policies, private document request-and-approve flow (not open links), **immediate revocation** on next click, download logging, and multi-product trust pages per org with scoped team members . Self-hosted with your database and AI key (including local models). **Early-stage**—verify production readiness, but the architecture (answer reuse with citations, revocation, audit logging) addresses real gaps in trust center workflows .
-
-
-
-### GRC Platforms with Public Compliance Pages
-
-
-
-- **[Probo](https://github.com/getprobo/probo)**  
-
-  The most comprehensive open-source **GRC platform** with a **public compliance portal** built in . Covers the full lifecycle: risk register with inherent/residual scoring, controls with maturity levels, vendor risk, data privacy (DPIA/TIA), access reviews, audit programs, and document approval workflows . **Public compliance page** features: NDA management, certification publishing, and custom domain support . **AI-native**: 270+ MCP tools expose every entity for AI agent automation; `prb` CLI (44+ command groups), GraphQL API, and n8n community node . **ISC licensed**, self-hostable with Docker, audit-ready with policy-based RBAC and immutable audit logs . **Best for teams wanting an integrated GRC backend with a public trust page**—the public page is less customizable than Kodus's dedicated trust center, but the GRC depth is unmatched in open source.
-
-
-
-- **[Openlane](https://github.com/theopenlane/core)**  
-
-  Open-source **compliance automation** alternative to Vanta, Drata, and Secureframe (Apache-2.0) . Supports **SOC 2, GDPR, ISO 27001, NIST 800-53**, and more . **Security features like SSO and 2FA ship with every module** rather than sitting behind an enterprise tier—a direct contrast to commercial platforms . Runs on Go, PostgreSQL, Redis, and OpenFGA without a pile of SaaS dependencies . **Trust Center and vanity domains** are on the roadmap (not yet shipped) . **Best for teams wanting Vanta-like automation with fully permissive licensing**—but the public Trust Center layer requires a separate tool until it ships.
-
-
-
-- **[QuickTrust](https://github.com/allgpt-co/quicktrustfinal)**  
-
-  Open-source, **AI-agent-first GRC platform** focused on making SOC 2, ISO 27001, HIPAA, and PCI DSS accessible (AGPL) . Features: **SOC 2 Type II framework** with 9 domains, 33 requirements, and control objectives fully seeded; 25 control templates across 8 security domains; 20 evidence templates; **AI controls generation agent** (Amazon Bedrock Claude Sonnet via LiteLLM) that tailors draft controls to your tech stack; multi-tenant architecture with RBAC; compliance dashboard with scoring . **Best for startups wanting AI-assisted SOC 2 readiness**—but it is early-stage and the Trust Center layer is not yet built (roadmap item).
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Unicis Platform CE** — Open-source GRC platform (Beta) positioned as a competitor to Vanta and Drata; covers privacy, security, risk, and compliance . **Early-stage**—verify production readiness before adoption .
-
-- **VerifyWise** — Open-source **AI governance** platform (365 GitHub stars) with a central repository for AI systems, risk assessments, and framework mapping across EU AI Act, ISO/IEC 42001, and NIST AI RMF . **AI-specific**—not a general security trust center, but relevant for organizations needing AI compliance assurance .
-
-- **@mdxui/soc2** — NPM package providing **SOC 2 compliance components** for building trust centers (public) and compliance portals (internal); integrates with Payload CMS . **Developer library**—for teams building custom trust center UIs, not a deployable platform .
-
-
-
-**Frameworks for building custom systems**: The choice depends on which layer you need. For a **standalone public Trust Center**, Kodus Trust Center provides the most focused, deployable option with YAML-driven configuration . For **integrated GRC automation with a public compliance page**, Probo offers the deepest open-source GRC lifecycle with 270+ MCP tools . For **Vanta-like automation with permissive licensing**, Openlane (Trust Center on roadmap) . For **AI-assisted SOC 2 readiness**, QuickTrust . No single open-source project matches SafeBase's **questionnaire automation and NDA-gated document workflows** combined with Vanta's **continuous evidence collection**—you either assemble Kodus + Probo, or accept feature gaps.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Trust Center and GRC platforms handling security posture and compliance evidence must comply with organizational security policies; **public trust portals publishing certification claims must ensure accuracy**—misrepresenting compliance status creates legal and reputational risk.
-
-- **Open-source security & compliance portals are emerging but fragmented**—Kodus Trust Center provides a standalone public trust portal , Probo provides integrated GRC with a public compliance page , and Openlane/QuickTrust provide Vanta-like automation . However, **no single open-source project matches SafeBase's questionnaire automation and NDA-gated document workflows combined with Vanta's continuous evidence collection**—organizations requiring the full commercial experience should evaluate SaaS platforms or plan for assembly.
-
-- Verify license terms for commercial use; Kodus Trust Center is open-source (check repository) , Probo uses ISC , Openlane uses Apache-2.0 , and QuickTrust uses AGPL .
-
-
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Security & Compliance Portals**. These systems empower organizations to publish customer-facing Trust Centers showcasing security posture, real-time control health, compliance certifications (SOC 2, ISO 27001, HIPAA, GDPR, NIST), and authorized subprocessors—while streamlining internal GRC workflows, continuous evidence collection, and automated vendor risk questionnaires.
 
 ---
 
+## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS/Hosted Platforms](#saashosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+  - [Public Trust Centers (Standalone)](#public-trust-centers-standalone)
+  - [Comprehensive GRC Platforms with Trust/Compliance Portals](#comprehensive-grc-platforms-with-trustcompliance-portals)
+  - [Compliance Automation & AI Governance Tools](#compliance-automation--ai-governance-tools)
+- [Frameworks & Architecture Considerations](#frameworks--architecture-considerations)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer & License](#disclaimer--license)
 
-**Made for security leaders, compliance managers, and teams building trust with buyers.**  
+---
 
-Let's make security and compliance portals more open, but with clear eyes about the questionnaire automation and evidence collection gaps that commercial platforms still fill.
+## Sector Overview & Market Dynamics
+
+The global Governance, Risk, and Compliance (GRC) and Security Compliance Automation market is estimated at **$45.3B–$60.5B in 2026** (with the dedicated IT-GRC and continuous compliance sub-segment exceeding **$22.6B**) and is projected to expand past **$80B–$116B by 2030** at an 11–13% CAGR. The sector exhibits **moderate fragmentation with aggressive category convergence**: while hyperscale enterprise incumbents (Atlassian, OneTrust) anchor multi-pillar suites, high-velocity compliance unicorns (Vanta, Drata) and customer trust automation specialists (SafeBase, Conveyor) compete fiercely in a rapidly consolidating landscape where buyer security reviews and AI-assisted questionnaire handling have turned compliance from a passive cost center into a core revenue-acceleration driver.
+
+---
+
+## SaaS/Hosted Platforms
+
+The table below lists leading commercial Security & Compliance Portal solutions, sorted by **Company Scale / Valuation (descending)**:
+
+| Platform | Category / Focus | Starting Tier Pricing | Free Tier / Free Trial Limits | Company Scale / Valuation |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Atlassian Trust Center](https://www.atlassian.com/)** | Enterprise Trust Portal & Security Governance | **Free** public Trust Center; [Atlassian Guard](https://www.atlassian.com/software/guard) starts at **$4.00/user/mo** | **Free forever** for public Trust Center; 30-day free trial for Atlassian Guard security add-on | Public (NASDAQ: TEAM) ~$50B Market Cap / $6.57B Annual Revenue |
+| **[OneTrust](https://www.onetrust.com/)** | Enterprise Privacy, Security & Third-Party GRC Suite | **$10,000/year** entry minimum (~$800–$1,100/mo billed annually for baseline modules) | **No free tier**; No self-serve trial (custom enterprise proof-of-concept upon sales approval) | Private ~$4.5B Valuation / ~$550M ARR |
+| **[Vanta Trust Center](https://www.vanta.com/)** | Continuous Compliance Automation & Trust Management | **$14,000/year** (Essentials tier for 1–20 seats, billed annually) | **No free tier**; No self-serve trial (guided sales demo and custom enterprise POC only) | Private ~$4.2B Valuation / >$300M ARR |
+| **[Drata Trust Center](https://drata.com/)** | Automated Audit Readiness, Continuous GRC & Trust Portals | **$7,500/year** (Starter tier for early startups, billed annually) | **No free tier**; No self-serve trial (sandbox demo granted post sales consultation) | Private ~$2.0B Valuation / >$100M ARR |
+| **[SafeBase](https://safebase.io/)** | Customer Trust Center & Security Questionnaire Automation | **$0/mo** (Foundation); Paid tiers start from **~$6,000–$10,000/year** | **Free forever plan** capped at 25 approved domains and basic Trust Center publishing | Acquired by Drata (~$250M Acquisition Value) / ~$10.3M ARR |
+| **[Secureframe Trust Center](https://secureframe.com/)** | Automated SOC 2/ISO 27001 Compliance & Trust Sharing | **$7,500/year** (Fundamentals tier, billed annually) | **No free tier**; No self-serve trial (scheduled product demo with account team) | Private ~$200M–$500M Est. Valuation / ~$20M+ ARR ($79M Raised) |
+| **[Whistic](https://www.whistic.com/)** | Dual-Sided Vendor Security Network & Trust Catalog | **$0/mo** (Basic Profile); Paid enterprise tiers start at **$15,000/year** | **Free forever Basic Profile** with 1 user, 1 profile, and up to 3 proactive profile shares/month | Private ~$100M–$250M Est. Valuation / ~$10M–$17M Revenue ($51M Raised) |
+| **[Conveyor](https://conveyor.com/)** | AI-Native Customer Trust Center & Security Reviews | **$9,600/year** ($800/mo billed annually for Business Plan) | **Free forever plan** limited to 15 documents, 10 Trust Center portal credits/mo (no AI review agent) | Private ~$80M–$100M Est. Valuation / ~$40M Total Raised |
+| **[TrustCloud](https://trustcloud.ai/)** | AI-Native Predictive Compliance & Programmatic TrustShare | **$1,999/year** (~$400/mo billed annually for starter compliance) | **Free forever plan** for startups (<20 employees) with basic SOC 2 readiness and TrustShare portal | Private ~$50M–$100M Est. Valuation / $1M–$10M Revenue ($52M Raised) |
+| **[RegScale](https://regscale.com/)** | Continuous Controls Monitoring (CCM) & Compliance-as-Code | **$0/mo** (Community Edition); Enterprise Edition custom quote (~$20,000+/year) | **Free forever Community Edition** (self-hosted CLI/OSCAL tool; excludes enterprise automation cluster) | Private Growth Stage ($60M Total Raised, M12/Microsoft backed) |
+
+---
+
+## Open-Source GitHub Projects
+
+The table below catalogs self-hostable open-source trust portals, GRC automation engines, and compliance-as-code suites, sorted by **GitHub Stars (descending)**. Every project includes its live social star counter linking to its repository stargazers page:
+
+| Project | Stars | Primary Focus / Description | Tech Stack & License |
+| :--- | :--- | :--- | :--- |
+| **[CISO Assistant](https://github.com/intuitem/ciso-assistant-community)** | [![GitHub stars](https://img.shields.io/github/stars/intuitem/ciso-assistant-community?style=social&color=white)](https://github.com/intuitem/ciso-assistant-community/stargazers) | All-in-one open-source GRC platform covering Risk Management, AppSec, Audit, TPRM, BIA, and Privacy. Supports 200+ global frameworks (ISO 27001, NIST CSF, SOC 2, NIS2, GDPR, HIPAA) with community trust portal add-ons. | Python, Django, React, Docker<br>`AGPL-3.0` |
+| **[StrongDM Comply](https://github.com/strongdm/comply)** | [![GitHub stars](https://img.shields.io/github/stars/strongdm/comply?style=social&color=white)](https://github.com/strongdm/comply/stargazers) | Developer-centric compliance automation framework focused on SOC 2. Treats policies and procedures as code, automating audit evidence collection and generating compliance documentation from Markdown. | Go, CLI, Pandoc<br>`Apache-2.0` |
+| **[Probo](https://github.com/getprobo/probo)** | [![GitHub stars](https://img.shields.io/github/stars/getprobo/probo?style=social&color=white)](https://github.com/getprobo/probo/stargazers) | Modern AI-native open-source GRC platform with integrated public compliance pages. Features NDA gating, risk register, vendor risk, 270+ MCP tools for AI agents, and a dedicated `prb` CLI. | Go, TypeScript, React, GraphQL<br>`ISC` |
+| **[VerifyWise](https://github.com/verifywise-ai/verifywise)** | [![GitHub stars](https://img.shields.io/github/stars/verifywise-ai/verifywise?style=social&color=white)](https://github.com/verifywise-ai/verifywise/stargazers) | Open-source AI governance, risk evaluation, and compliance platform. Enables cross-mapping and auditing against the EU AI Act, ISO/IEC 42001, and NIST AI RMF with CI/CD PR gating. | Python, FastAPI, Next.js<br>`Apache-2.0` |
+| **[Openlane](https://github.com/theopenlane/core)** | [![GitHub stars](https://img.shields.io/github/stars/theopenlane/core?style=social&color=white)](https://github.com/theopenlane/core/stargazers) | Enterprise-grade open-source compliance automation engine for SOC 2, ISO 27001, GDPR, and NIST 800-53. Ships with native SSO/2FA on every tier; Trust Center portal module actively being integrated. | Go, Ent, GraphQL, OpenFGA<br>`Apache-2.0` |
+| **[GigaChad GRC](https://github.com/grcengineering/gigachad-grc)** | [![GitHub stars](https://img.shields.io/github/stars/grcengineering/gigachad-grc?style=social&color=white)](https://github.com/grcengineering/gigachad-grc/stargazers) | Streamlined, containerized open-source GRC platform for engineering teams. Automates SOC 2, ISO 27001, and HIPAA control checks, vendor assessments, and internal audit logs with AI copilot integration. | TypeScript, Node.js, Docker<br>`Apache-2.0` |
+| **[OpenGRC](https://github.com/LeeMangold/OpenGRC)** | [![GitHub stars](https://img.shields.io/github/stars/LeeMangold/OpenGRC)](https://github.com/LeeMangold/OpenGRC/stargazers) | Self-hosted GRC platform tailored for small and mid-sized security teams. Centralizes risk management, security controls, audit readiness, and incident handling for NIST CSF, HIPAA, and ISO 27001. | PHP, JavaScript, Docker<br>`GPL-3.0` |
+| **[Unicis Platform CE](https://github.com/UnicisTech/unicis-platform-ce)** | [![GitHub stars](https://img.shields.io/github/stars/UnicisTech/unicis-platform-ce?style=social&color=white)](https://github.com/UnicisTech/unicis-platform-ce/stargazers) | Self-hosted, all-in-one compliance and risk management portal. Serves as a transparent open-source alternative to Vanta/Drata for tracking ISO 27001, GDPR, and NIS2 evidence without SaaS lock-in. | TypeScript, React, Node.js<br>`AGPL-3.0` |
+| **[Kodus Trust Center](https://github.com/kodustech/trust-center)** | [![GitHub stars](https://img.shields.io/github/stars/kodustech/trust-center?style=social&color=white)](https://github.com/kodustech/trust-center/stargazers) | Purpose-built standalone open-source Trust Center. Renders a public-facing security trust portal from a single YAML configuration file with compliance badges, subprocessor lists, and document requests. | Next.js 16, Supabase, Tailwind CSS<br>`MIT` |
+| **[QuickTrust](https://github.com/allgpt-co/quicktrustfinal)** | [![GitHub stars](https://img.shields.io/github/stars/allgpt-co/quicktrustfinal?style=social&color=white)](https://github.com/allgpt-co/quicktrustfinal/stargazers) | AI-agent-first open-source GRC framework. Features an automated SOC 2 Type II seed library, compliance scoring dashboard, and Bedrock/Claude agent for tailoring internal security controls. | Python, React, Bedrock<br>`AGPL-3.0` |
+
+---
+
+### Public Trust Centers (Standalone)
+
+- **[Kodus Trust Center](https://github.com/kodustech/trust-center)**: The most dedicated standalone open-source **Trust Center builder**. Built with Next.js 16 and Supabase, it generates a full public-facing trust site directly from a YAML document. Includes compliance badges, subprocessor inventories, NDA-governed document requests, FAQ accordions, and an admin UI.
+
+---
+
+### Comprehensive GRC Platforms with Trust/Compliance Portals
+
+- **[CISO Assistant](https://github.com/intuitem/ciso-assistant-community)**: The most widely adopted open-source GRC platform. Offers a centralized hub for multi-framework compliance mapping, risk scoring, vendor reviews, and community-driven trust portal integration.
+- **[Probo](https://github.com/getprobo/probo)**: Full-lifecycle open-source GRC platform offering out-of-the-box public compliance pages with custom domain support and NDA document gating. Highly agentic with 270+ MCP endpoints.
+- **[Unicis Platform CE](https://github.com/UnicisTech/unicis-platform-ce)**: Comprehensive community platform for privacy, vendor risk, and compliance tracking without recurring enterprise software fees.
+- **[OpenGRC](https://github.com/LeeMangold/OpenGRC)**: Lightweight, modular self-hosted risk and audit management system for SMB security operations.
+- **[GigaChad GRC](https://github.com/grcengineering/gigachad-grc)**: Developer-first GRC system containerized for rapid deployment with modern control tracking.
+
+---
+
+### Compliance Automation & AI Governance Tools
+
+- **[StrongDM Comply](https://github.com/strongdm/comply)**: Markdown/Git-based compliance-as-code automation tool for SOC 2 policies, evidence, and audit prep.
+- **[Openlane](https://github.com/theopenlane/core)**: Enterprise compliance automation engine written in Go with OpenFGA authorization, built to replace commercial compliance automation tools.
+- **[VerifyWise](https://github.com/verifywise-ai/verifywise)**: Specialized open-source governance platform focusing on LLM evaluations and AI regulations (EU AI Act, ISO 42001, NIST AI RMF).
+- **[QuickTrust](https://github.com/allgpt-co/quicktrustfinal)**: AI-native SOC 2 readiness engine using LLM agents to draft controls suited to your specific cloud stack.
+
+---
+
+## Frameworks & Architecture Considerations
+
+Organizations adopting or building a security and compliance portal typically operate across two decoupled layers:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                   Layer 1: Public Customer Trust Center                │
+│ (Certifications, Subprocessors, NDA-Gated Audit Reports, Security FAQs)│
+├────────────────────────────────────────────────────────────────────────┤
+│ Examples: Kodus Trust Center, SafeBase, Conveyor, Atlassian Portal     │
+└────────────────────────────────────┬───────────────────────────────────┘
+                                     │ Continuous Sync / Evidence
+┌────────────────────────────────────▼───────────────────────────────────┐
+│                 Layer 2: Internal GRC & Evidence Automation            │
+│  (Cloud Posture Monitoring, Access Reviews, Control Testing, Risk)     │
+├────────────────────────────────────────────────────────────────────────┤
+│ Examples: CISO Assistant, Probo, Openlane, Vanta, Drata, OneTrust      │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+1. **Standalone Trust Center vs. Integrated GRC**: If you already maintain internal GRC controls, deploying a lightweight, YAML-driven portal like **Kodus Trust Center** provides instant buyer transparency without platform lock-in. If you need end-to-end evidence collection with a public badge, evaluate **Probo** or **CISO Assistant**.
+2. **AI & Questionnaires**: SafeBase and Conveyor dominate automated questionnaire answering for enterprise sales teams. In open-source setups, **Probo's 270+ MCP tools** allow teams to wire local LLMs directly into control registers to answer security inquiries programmatically.
+
+---
+
+## How to Contribute
+
+Contributions are warmly welcomed! Please follow these steps:
+
+1. Fork this repository.
+2. Add or update entries following the established table formats (ensure specific pricing numbers, explicit free tier limits, company valuation/scale, and social star badges are included).
+3. Verify that URLs link directly to official project websites or GitHub repositories.
+4. Submit a Pull Request with a clear summary of your additions.
+
+---
+
+## Disclaimer & License
+
+- This repository is a community-curated directory intended solely for educational, architectural, and informational purposes.
+- All product names, logos, trademarks, and registered trademarks belong to their respective owners.
+- Compliance and security claims published on Trust Centers carry regulatory and legal liability. Always verify audit reports with accredited certifying bodies (CPA firms, ISO registrars).
+- Distributed under the [MIT License](file:///C:/Users/hp/Documents/Projects/Awesome-Security-Compliance-Portal/LICENSE).
